@@ -15,5 +15,5 @@ FOUNDATION_EXPORT double UIKit_jsVersionNumber;
 FOUNDATION_EXPORT const unsigned char UIKit_jsVersionString[];
 
 // In this header, you should import all the public headers of your framework using statements like #import <UIKit_js/PublicHeader.h>
-
+#import "UIKitJS-Swift.h"
 
