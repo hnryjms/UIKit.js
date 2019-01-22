@@ -18,10 +18,15 @@
 		3648A55821BD726B00620B33 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3648A55621BD726B00620B33 /* LaunchScreen.storyboard */; };
 		3648A55D21BD72BB00620B33 /* UIKitJS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3648A52B21BD722900620B33 /* UIKitJS.framework */; };
 		3648A55E21BD72BB00620B33 /* UIKitJS.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3648A52B21BD722900620B33 /* UIKitJS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		3648A56321BD738500620B33 /* Bridge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3648A56221BD738500620B33 /* Bridge.swift */; };
+		3648A56321BD738500620B33 /* JSBridge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3648A56221BD738500620B33 /* JSBridge.swift */; };
 		3648A56521BD783A00620B33 /* JSModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3648A56421BD783A00620B33 /* JSModule.swift */; };
 		3648A56721BD789A00620B33 /* MyModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3648A56621BD789A00620B33 /* MyModule.swift */; };
 		3648A56D21BDC9C600620B33 /* main.js in Resources */ = {isa = PBXBuildFile; fileRef = 3648A56B21BDC97C00620B33 /* main.js */; };
+		367A6B2B21F675FC006542FD /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 367A6B2A21F675FC006542FD /* UIViewController.swift */; };
+		367A6B2F21F6E192006542FD /* JSOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 367A6B2E21F6E192006542FD /* JSOperation.swift */; };
+		367A6B3121F6E1BB006542FD /* JSError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 367A6B3021F6E1BB006542FD /* JSError.swift */; };
+		36D31C6A21C56A040003F361 /* UINavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D31C6921C56A040003F361 /* UINavigationBar.swift */; };
+		36D31C6D21C56D800003F361 /* UINavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D31C6C21C56D800003F361 /* UINavigationController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,10 +75,15 @@
 		3648A55421BD726B00620B33 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3648A55721BD726B00620B33 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3648A55921BD726B00620B33 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3648A56221BD738500620B33 /* Bridge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bridge.swift; sourceTree = "<group>"; };
+		3648A56221BD738500620B33 /* JSBridge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSBridge.swift; sourceTree = "<group>"; };
 		3648A56421BD783A00620B33 /* JSModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSModule.swift; sourceTree = "<group>"; };
 		3648A56621BD789A00620B33 /* MyModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyModule.swift; sourceTree = "<group>"; };
 		3648A56B21BDC97C00620B33 /* main.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = main.js; sourceTree = "<group>"; };
+		367A6B2A21F675FC006542FD /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
+		367A6B2E21F6E192006542FD /* JSOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSOperation.swift; sourceTree = "<group>"; };
+		367A6B3021F6E1BB006542FD /* JSError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSError.swift; sourceTree = "<group>"; };
+		36D31C6921C56A040003F361 /* UINavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UINavigationBar.swift; sourceTree = "<group>"; };
+		36D31C6C21C56D800003F361 /* UINavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UINavigationController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,8 +138,12 @@
 			children = (
 				3648A52E21BD722900620B33 /* UIKit_js.h */,
 				3648A52F21BD722900620B33 /* Info.plist */,
-				3648A56221BD738500620B33 /* Bridge.swift */,
+				3648A56221BD738500620B33 /* JSBridge.swift */,
+				367A6B2E21F6E192006542FD /* JSOperation.swift */,
+				367A6B3021F6E1BB006542FD /* JSError.swift */,
 				3648A56421BD783A00620B33 /* JSModule.swift */,
+				36D31C6B21C56D6A0003F361 /* Controllers */,
+				36D31C6821C569E80003F361 /* Views */,
 			);
 			path = UIKit.js;
 			sourceTree = "<group>";
@@ -157,6 +171,23 @@
 				3648A56621BD789A00620B33 /* MyModule.swift */,
 			);
 			path = UIKit.jsExamples;
+			sourceTree = "<group>";
+		};
+		36D31C6821C569E80003F361 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				36D31C6921C56A040003F361 /* UINavigationBar.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		36D31C6B21C56D6A0003F361 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				36D31C6C21C56D800003F361 /* UINavigationController.swift */,
+				367A6B2A21F675FC006542FD /* UIViewController.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -304,7 +335,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				3648A56521BD783A00620B33 /* JSModule.swift in Sources */,
-				3648A56321BD738500620B33 /* Bridge.swift in Sources */,
+				367A6B3121F6E1BB006542FD /* JSError.swift in Sources */,
+				36D31C6D21C56D800003F361 /* UINavigationController.swift in Sources */,
+				36D31C6A21C56A040003F361 /* UINavigationBar.swift in Sources */,
+				3648A56321BD738500620B33 /* JSBridge.swift in Sources */,
+				367A6B2F21F6E192006542FD /* JSOperation.swift in Sources */,
+				367A6B2B21F675FC006542FD /* UIViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -501,7 +537,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "io.hnryjms.UIKit-js";
+				PRODUCT_BUNDLE_IDENTIFIER = io.hnryjms.UIKitJS;
 				PRODUCT_NAME = UIKitJS;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -527,7 +563,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "io.hnryjms.UIKit-js";
+				PRODUCT_BUNDLE_IDENTIFIER = io.hnryjms.UIKitJS;
 				PRODUCT_NAME = UIKitJS;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.2;

@@ -7,9 +7,9 @@
 //
 
 import XCTest
-@testable import UIKit_js
+@testable import UIKitJS
 
-class UIKit_jsTests: XCTestCase {
+class UIKitJSTests: XCTestCase {
 
     override func setUp() {
         // Put setup code here. This method is called before the invocation of each test method in the class.

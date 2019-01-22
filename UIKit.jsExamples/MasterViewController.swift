@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import UIKitJS
 
 class MasterViewController: UITableViewController {
 
@@ -25,6 +26,11 @@ class MasterViewController: UITableViewController {
         if let split = splitViewController {
             let controllers = split.viewControllers
             detailViewController = (controllers[controllers.count-1] as! UINavigationController).topViewController as? DetailViewController
+        }
+
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        appDelegate.bridge!.invoke(JSOperation("MasterService.loadData()")!, withArguments: ["c"]) { result, error in
+            print("Hi \(result ?? error!)")
         }
     }
 

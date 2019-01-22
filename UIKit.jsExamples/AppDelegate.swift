@@ -13,7 +13,7 @@ import UIKitJS
 class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDelegate {
 
     var window: UIWindow?
-    var bridge: Bridge? = try? Bridge(Bundle.main.url(forResource: "main", withExtension: "js"), modules: [MyModule()])
+    var bridge: JSBridge?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
@@ -21,6 +21,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDele
         let navigationController = splitViewController.viewControllers[splitViewController.viewControllers.count-1] as! UINavigationController
         navigationController.topViewController!.navigationItem.leftBarButtonItem = splitViewController.displayModeButtonItem
         splitViewController.delegate = self
+
+        try? JSBridge.enableHooks()
+
+        self.bridge = try? JSBridge(Bundle.main.url(forResource: "main", withExtension: "js"), modules: [
+            MyModule(splitViewController)
+        ])
+
         return true
     }
 

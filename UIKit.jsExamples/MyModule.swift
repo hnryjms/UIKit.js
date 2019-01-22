@@ -11,13 +11,29 @@ import UIKitJS
 import JavaScriptCore
 
 @objc protocol MyModuleExports: JSExport {
-    func alert(message: String)
+    var navigationController: UINavigationController { get set }
 }
 
 class MyModule: NSObject, JSModule, MyModuleExports {
     let name = "MyModule"
-    
-    func alert(message: String) {
-        print("hello \(message)")
+    let controller: UIViewController
+
+    init(_ controller: UIViewController) {
+        self.controller = controller
+    }
+
+    var navigationController: UINavigationController {
+        get {
+            let appDelegate = UIApplication.shared.delegate as! AppDelegate
+            let splitViewController = appDelegate.window!.rootViewController as! UISplitViewController
+            let navigationController = splitViewController.viewControllers[0] as! UINavigationController
+            return navigationController
+        }
+
+        set {
+            let appDelegate = UIApplication.shared.delegate as! AppDelegate
+            let splitViewController = appDelegate.window!.rootViewController as! UISplitViewController
+            splitViewController.showDetailViewController(newValue, sender: self)
+        }
     }
 }
