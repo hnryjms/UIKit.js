@@ -24,6 +24,7 @@
 		367A6B2B21F675FC006542FD /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 367A6B2A21F675FC006542FD /* UIViewController.swift */; };
 		367A6B2F21F6E192006542FD /* JSOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 367A6B2E21F6E192006542FD /* JSOperation.swift */; };
 		367A6B3121F6E1BB006542FD /* JSError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 367A6B3021F6E1BB006542FD /* JSError.swift */; };
+		367A6B4121F79540006542FD /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 367A6B4021F79540006542FD /* LICENSE */; };
 		36D31C6A21C56A040003F361 /* UINavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D31C6921C56A040003F361 /* UINavigationBar.swift */; };
 		36D31C6D21C56D800003F361 /* UINavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D31C6C21C56D800003F361 /* UINavigationController.swift */; };
 /* End PBXBuildFile section */
@@ -80,6 +81,8 @@
 		367A6B2A21F675FC006542FD /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
 		367A6B2E21F6E192006542FD /* JSOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSOperation.swift; sourceTree = "<group>"; };
 		367A6B3021F6E1BB006542FD /* JSError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSError.swift; sourceTree = "<group>"; };
+		367A6B3F21F78BA4006542FD /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		367A6B4021F79540006542FD /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		36D31C6921C56A040003F361 /* UINavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UINavigationBar.swift; sourceTree = "<group>"; };
 		36D31C6C21C56D800003F361 /* UINavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UINavigationController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -114,6 +117,8 @@
 		3648A52121BD722900620B33 = {
 			isa = PBXGroup;
 			children = (
+				367A6B3F21F78BA4006542FD /* README.md */,
+				367A6B4021F79540006542FD /* LICENSE */,
 				3648A52D21BD722900620B33 /* UIKit.js */,
 				3648A53821BD722900620B33 /* UIKit.jsTests */,
 				3648A54A21BD726900620B33 /* UIKit.jsExamples */,
@@ -291,6 +296,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				367A6B4121F79540006542FD /* LICENSE in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
