@@ -10,7 +10,9 @@ import UIKit
 import JavaScriptCore
 
 @objc private protocol UINavigationBarJSExport: JSExport {
+#if !os(tvOS)
     var prefersLargeTitles: Bool { get set }
+#endif
 }
 
 extension UINavigationBar: JSModule, UINavigationBarJSExport {
