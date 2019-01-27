@@ -10,8 +10,8 @@
 		3648A53521BD722900620B33 /* UIKitJS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3648A52B21BD722900620B33 /* UIKitJS.framework */; };
 		3648A53A21BD722900620B33 /* UIKitJSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3648A53921BD722900620B33 /* UIKitJSTests.swift */; };
 		3648A54C21BD726900620B33 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3648A54B21BD726900620B33 /* AppDelegate.swift */; };
-		3648A54E21BD726900620B33 /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3648A54D21BD726900620B33 /* MasterViewController.swift */; };
-		3648A55021BD726900620B33 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3648A54F21BD726900620B33 /* DetailViewController.swift */; };
+		3648A54E21BD726900620B33 /* ExampleListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3648A54D21BD726900620B33 /* ExampleListVC.swift */; };
+		3648A55021BD726900620B33 /* ExampleItemVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3648A54F21BD726900620B33 /* ExampleItemVC.swift */; };
 		3648A55321BD726900620B33 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3648A55121BD726900620B33 /* Main.storyboard */; };
 		3648A55521BD726B00620B33 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3648A55421BD726B00620B33 /* Assets.xcassets */; };
 		3648A55821BD726B00620B33 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3648A55621BD726B00620B33 /* LaunchScreen.storyboard */; };
@@ -68,8 +68,8 @@
 		3648A53B21BD722900620B33 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3648A54921BD726900620B33 /* UIKitJSExamples.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UIKitJSExamples.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3648A54B21BD726900620B33 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		3648A54D21BD726900620B33 /* MasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
-		3648A54F21BD726900620B33 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		3648A54D21BD726900620B33 /* ExampleListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleListVC.swift; sourceTree = "<group>"; };
+		3648A54F21BD726900620B33 /* ExampleItemVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleItemVC.swift; sourceTree = "<group>"; };
 		3648A55221BD726900620B33 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3648A55421BD726B00620B33 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3648A55721BD726B00620B33 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -162,17 +162,50 @@
 		3648A54A21BD726900620B33 /* UIKit.jsExamples */ = {
 			isa = PBXGroup;
 			children = (
-				3648A56B21BDC97C00620B33 /* main.js */,
+				36D01A6A21FE1CDE0091F054 /* Resources */,
 				3648A54B21BD726900620B33 /* AppDelegate.swift */,
-				3648A54D21BD726900620B33 /* MasterViewController.swift */,
-				3648A54F21BD726900620B33 /* DetailViewController.swift */,
-				3648A55121BD726900620B33 /* Main.storyboard */,
-				3648A55421BD726B00620B33 /* Assets.xcassets */,
-				3648A55621BD726B00620B33 /* LaunchScreen.storyboard */,
-				3648A55921BD726B00620B33 /* Info.plist */,
+				36D01A7121FE23AD0091F054 /* Controllers */,
 				3648A56621BD789A00620B33 /* MyModule.swift */,
 			);
 			path = UIKit.jsExamples;
+			sourceTree = "<group>";
+		};
+		36D01A6A21FE1CDE0091F054 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				36D01A6B21FE1D090091F054 /* Frameworks */,
+				3648A55121BD726900620B33 /* Main.storyboard */,
+				3648A56B21BDC97C00620B33 /* main.js */,
+				3648A55621BD726B00620B33 /* LaunchScreen.storyboard */,
+				3648A55421BD726B00620B33 /* Assets.xcassets */,
+				3648A55921BD726B00620B33 /* Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		36D01A6B21FE1D090091F054 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				36D01A6C21FE1D230091F054 /* Unbox.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		36D01A7121FE23AD0091F054 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				3648A54D21BD726900620B33 /* ExampleListVC.swift */,
+				3648A54F21BD726900620B33 /* ExampleItemVC.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		36D01A7221FE294F0091F054 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				36D01A7321FE29600091F054 /* BasicFetch.swift */,
+			);
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 		36D31C6821C569E80003F361 /* Views */ = {
@@ -347,9 +380,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3648A55021BD726900620B33 /* DetailViewController.swift in Sources */,
+				3648A55021BD726900620B33 /* ExampleItemVC.swift in Sources */,
+				36D01A6F21FE1EB70091F054 /* UnboxJSValue.swift in Sources */,
 				3648A56721BD789A00620B33 /* MyModule.swift in Sources */,
-				3648A54E21BD726900620B33 /* MasterViewController.swift in Sources */,
+				3648A54E21BD726900620B33 /* ExampleListVC.swift in Sources */,
 				3648A54C21BD726900620B33 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -610,7 +644,11 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = UIKit.jsExamples/Info.plist;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = UIKit.jsExamples/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -628,7 +666,11 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = UIKit.jsExamples/Info.plist;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = UIKit.jsExamples/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
