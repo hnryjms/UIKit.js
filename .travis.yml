@@ -1,0 +1,24 @@
+language: objective-c
+osx_image: xcode10.1
+addons:
+  homebrew:
+    packages:
+      - carthage
+before_script:
+  - carthage bootstrap
+script:
+  - xcodebuild clean test -project UIKit.js.xcodeproj -scheme UIKitJS -destination "platform=iOS Simulator,OS=12.1,name=iPhone XS"
+  - xcodebuild clean test -project UIKit.js.xcodeproj -scheme UIKitJS -destination "platform=tvOS Simulator,OS=12.1,name=Apple TV 4K"
+before_deploy:
+  - carthage build --no-skip-current
+  - carthage archive UIKitJS
+deploy:
+  provider: releases
+  api_key:
+    secure: jaIHPQOPMdCpwe0b3ItPLCrJrloaIeQ0GQRk5g7ofFOT4ooGTNoDTuk0wri2Dzf9DUqm+iGpGTWVCf2r5nbdlcxj26HUwIGeAp+q8YJnBlVs+Q8yldEnTxW/g18D9lK+HRKoBLb28i1kjd+dC05fMYelRvYce1SdZ7DvGLT6wYGN3PJU57eL6ko9oMkDGU8DrX0HPpjxyPBLDHIuYhVmjU1tPZInY6C8hg7PawdZw1GjFO34BEuVQOa1Q5owD1egFrOK/3UjyQ1Q36b650oxh22NvHmZYA25MjOYdbEVIfaNlrZRWtuDYYZfaj/qRGXLVx0G8M+ohKQ08S5zMu/qlirCSz6buleAbMtyeyGTXYZEGcAP+VGu1jahWydu4G+JyppR53b+vONpkXhia2ntqi6DBYQvXu7ThqhBu2yAd+WEBDTsYQNJII/za0pDD3Xf/WQJnD/4Ald8TAhNqzdauvcmuyQ1TuzgdkqMgMMpNMccWvg0gHI32HZA2KCorkkhGRO1uibVt7zOqSgJozW7rGMLDMJP3Buan0tgyUs5Iz9bpemk6837zPigII+rTrkNy4POnfrc/TbrFLDCiHb0h/PcWqidNOwU9NvEILUdD9Fmg5p/g0sd72uaOq7uCRqqJEht9Yq5igmTLfX1I4Qm7QkPapEB4c2VjaFX3FGGRQk=
+  file: UIKitJS.framework.zip
+  skip_cleanup: true
+  on:
+    repo: hnryjms/UIKit.js
+    tags: true
+

@@ -1,4 +1,4 @@
-#  UIKit.js
+#  UIKit.js [![GitHub license](https://img.shields.io/badge/license-MIT-lightgrey.svg)](https://raw.githubusercontent.com/hnryjms/UIKit.js/master/LICENSE) [![GitHub release](https://img.shields.io/github/release/hnryjms/UIKit.js.svg)](https://github.com/hnryjms/UIKit.js/releases) [![Travis CI status](https://travis-ci.org/hnryjms/UIKit.js.svg)](https://travis-ci.org/hnryjms/UIKit.js)
 
 Build powerful native iOS or tvOS apps using JavaScript backend services.
 
