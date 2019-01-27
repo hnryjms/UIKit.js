@@ -24,8 +24,6 @@
 		367A6B2B21F675FC006542FD /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 367A6B2A21F675FC006542FD /* UIViewController.swift */; };
 		367A6B2F21F6E192006542FD /* JSOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 367A6B2E21F6E192006542FD /* JSOperation.swift */; };
 		367A6B3121F6E1BB006542FD /* JSError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 367A6B3021F6E1BB006542FD /* JSError.swift */; };
-		367A6B4121F79540006542FD /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 367A6B4021F79540006542FD /* LICENSE */; };
-		36D01A6921FE1C800091F054 /* Cartfile.private in Resources */ = {isa = PBXBuildFile; fileRef = 36D01A6821FE1C800091F054 /* Cartfile.private */; };
 		36D01A6D21FE1D230091F054 /* Unbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36D01A6C21FE1D230091F054 /* Unbox.framework */; };
 		36D01A6F21FE1EB70091F054 /* UnboxJSValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D01A6E21FE1EB70091F054 /* UnboxJSValue.swift */; };
 		36D01A7421FE29600091F054 /* BasicFetch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D01A7321FE29600091F054 /* BasicFetch.swift */; };
@@ -231,8 +229,8 @@
 		36D31C6B21C56D6A0003F361 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				36D31C6C21C56D800003F361 /* UINavigationController.swift */,
 				367A6B2A21F675FC006542FD /* UIViewController.swift */,
+				36D31C6C21C56D800003F361 /* UINavigationController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -342,8 +340,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				367A6B4121F79540006542FD /* LICENSE in Resources */,
-				36D01A6921FE1C800091F054 /* Cartfile.private in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

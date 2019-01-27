@@ -5,13 +5,30 @@ Build powerful native iOS or tvOS apps using JavaScript backend services.
 **Note: This framework is currently a proof-of-concept—if you like the idea, let me know
 at [@hnryjms][twitter-hnryjms] or my [personal website][hnryjms].**
 
-This framework provides tools and methods for sharing data between JavaScript and native
-code, but still allows (and even relies) on many powerful features of native apps built with
-Xcode, such as Storyboards and UI Components.
+UIKit.js adds mappings and extensions to make [JavaScriptCore][jscore] easier to use when
+building advanced Swift apps with JavaScript backend services. That means sharing more code
+from web and mobile 🌈
 
-Unlike [React Native][react-native], this project seeks solely to bridge existing properties of
-Interface Builder components to the JavaScript environment, rather than reconstruct them
-as look-alike JS components.
+- **View Controllers** 📱 - Create and map any view controller to JavaScript to change properties
+  about the rendered screen, or push to new screens within JavaScript code.
+  - [x] `UIViewController`
+  - [x] `UINavigationController`
+  - [ ] Others coming soon
+- **UI Components** 🎛 - Create and map any UI component to JavaScript to observe and change
+  properties about the element, or add elements to the UI dynamically within JavaScript code.
+  - [x] `UINavigationBar`
+  - [ ] Others coming soon
+- **Browser Helpers** 🌍 - Utilize browser-addons within JavaScript code.
+  - [x] `fetch()` - Perform basic network requests.
+  - [ ] Others coming soon
+- **Device Helpers** 📁 - Utilize device-specific functionality within JavaScript code.
+  - [ ] `FileSystem` - Read and write disk files (coming soon)
+  - [ ] Others coming soon
+
+This project is not a comparable tool to [React Native][react-native]—our purpose is to enable
+JavaScript code for connecting and manipulating native UI elements. The React Native framework
+has moved away from this model, instead using custom-built look-alike UI components to mimic
+iOS behavior.
 
 ## Getting Started
 
@@ -19,17 +36,29 @@ as look-alike JS components.
 
 You can install UIKit.js using [Carthage][carthage] for iOS or tvOS.
 
-```sh
-$ echo 'github "hnryjms/UIKit.js" ~> 0.1' >> Cartfile
-$ carthage update
-```
+1. Add the `UIKit.js` project to your Cartfile:
+    ```
+    github "hnryjms/UIKit.js" ~> 0.1
+    ```
+1. Run `carthage update`
+1. Drag the built `.framework` binaries from `Carthage/Build/<platform>` into your
+  application’s Xcode project.
+1. On your application targets' _Build Phases_ settings tab, click the _+_ icon and choose
+  _New Run Script Phase_. Create a Run Script in which you specify your shell (ex: `/bin/sh`),
+  add the following contents to the script area below the shell:
+    ```sh
+    /usr/local/bin/carthage copy-frameworks
+    ```
+- Add the paths to the frameworks you want to use under "Input Files". For example:
+    ```
+    $(SRCROOT)/Carthage/Build/iOS/UIKitJS.framework
+    ```
+- Add the paths to the copied frameworks to the "Output Files". For example:
+    ```
+    $(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/UIKitJS.framework
+    ```
 
-Then, drag the `Carthage/Build/iOS/UIKitJS.framework` file into your project (make sure
-to deselect the `Copy items if needed` option), and ensure the framework is added to your
-app/target's `Embedded Binaries` and `Linked Frameworks and Libraries` section.
-
-(note: you may want to check out the [Carthage][carthage] Quick Start guide on their project
-README for a complete setup guide, including several `copy-framework` improvements).
+Source: [Carthage][carthage] Quick Start guide.
 
 ### Setup
 
@@ -88,7 +117,7 @@ this.MyJSModule = MyJSModule;
 
 You can use the Webpack bundler to build the JavaScript entrypoint for your native app code.
 
-(guide coming soon)
+- [ ] Guide coming soon
 
 ### Advanced Usage; Custom Modules
 
@@ -118,7 +147,7 @@ import UIKitJS
 
 @UIApplicationMain
 class AppDelegate {
-    static let bridge = {
+    static let bridge: JSBridge = {
         let modules = [ MyModule() ]
         return try! JSBridge(Bundle.main.url(forResource: "main", withExtension: "js"), modules: modules)
     }()
@@ -130,7 +159,7 @@ class AppDelegate {
 You can expose UI entry points through the JavaScript bridge to allow some UI component rendering
 and handling inside JS code.
 
-(guide coming soon)
+- [ ] Guide coming soon
 
 ## Example Project
 
@@ -138,6 +167,7 @@ You can find an example project inside UIKit.js, built for iOS. You can run it f
 repository by simply opening the `UIKit.js.xcodeproj` file in Xcode.
 
 [twitter-hnryjms]: https://twitter.com/hnryjms
+[jscore]: https://developer.apple.com/documentation/javascriptcore
 [hnryjms]: https://hnryjms.io
 [react-native]: https://github.com/facebook/react-native
 [carthage]: https://github.com/Carthage/Carthage
