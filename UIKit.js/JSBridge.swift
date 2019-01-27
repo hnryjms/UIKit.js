@@ -70,6 +70,9 @@ public class JSBridge {
         self.context.setObject(JSViewController.self, forKeyedSubscript: "UIViewController" as NSString)
         self.context.setObject(UINavigationBar.self, forKeyedSubscript: "UINavigationBar" as NSString)
 
+        self.context.setObject(unsafeBitCast(buildFetch(self.context), to: AnyObject.self), forKeyedSubscript: "fetch" as NSString)
+        self.context.setObject(Response.self, forKeyedSubscript: "Response" as NSString)
+
         modules?.forEach({ module in
             self.context.setObject(module, forKeyedSubscript: module.name as NSString)
         })

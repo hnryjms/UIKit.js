@@ -25,6 +25,10 @@
 		367A6B2F21F6E192006542FD /* JSOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 367A6B2E21F6E192006542FD /* JSOperation.swift */; };
 		367A6B3121F6E1BB006542FD /* JSError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 367A6B3021F6E1BB006542FD /* JSError.swift */; };
 		367A6B4121F79540006542FD /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 367A6B4021F79540006542FD /* LICENSE */; };
+		36D01A6921FE1C800091F054 /* Cartfile.private in Resources */ = {isa = PBXBuildFile; fileRef = 36D01A6821FE1C800091F054 /* Cartfile.private */; };
+		36D01A6D21FE1D230091F054 /* Unbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36D01A6C21FE1D230091F054 /* Unbox.framework */; };
+		36D01A6F21FE1EB70091F054 /* UnboxJSValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D01A6E21FE1EB70091F054 /* UnboxJSValue.swift */; };
+		36D01A7421FE29600091F054 /* BasicFetch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D01A7321FE29600091F054 /* BasicFetch.swift */; };
 		36D31C6A21C56A040003F361 /* UINavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D31C6921C56A040003F361 /* UINavigationBar.swift */; };
 		36D31C6D21C56D800003F361 /* UINavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D31C6C21C56D800003F361 /* UINavigationController.swift */; };
 /* End PBXBuildFile section */
@@ -83,6 +87,10 @@
 		367A6B3021F6E1BB006542FD /* JSError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSError.swift; sourceTree = "<group>"; };
 		367A6B3F21F78BA4006542FD /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		367A6B4021F79540006542FD /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		36D01A6821FE1C800091F054 /* Cartfile.private */ = {isa = PBXFileReference; lastKnownFileType = text; path = Cartfile.private; sourceTree = "<group>"; };
+		36D01A6C21FE1D230091F054 /* Unbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Unbox.framework; path = Carthage/Build/iOS/Unbox.framework; sourceTree = SOURCE_ROOT; };
+		36D01A6E21FE1EB70091F054 /* UnboxJSValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnboxJSValue.swift; sourceTree = "<group>"; };
+		36D01A7321FE29600091F054 /* BasicFetch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicFetch.swift; sourceTree = "<group>"; };
 		36D31C6921C56A040003F361 /* UINavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UINavigationBar.swift; sourceTree = "<group>"; };
 		36D31C6C21C56D800003F361 /* UINavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UINavigationController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -108,6 +116,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3648A55D21BD72BB00620B33 /* UIKitJS.framework in Frameworks */,
+				36D01A6D21FE1D230091F054 /* Unbox.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -117,6 +126,7 @@
 		3648A52121BD722900620B33 = {
 			isa = PBXGroup;
 			children = (
+				36D01A6821FE1C800091F054 /* Cartfile.private */,
 				367A6B3F21F78BA4006542FD /* README.md */,
 				367A6B4021F79540006542FD /* LICENSE */,
 				3648A52D21BD722900620B33 /* UIKit.js */,
@@ -144,6 +154,7 @@
 				367A6B2E21F6E192006542FD /* JSOperation.swift */,
 				367A6B3021F6E1BB006542FD /* JSError.swift */,
 				3648A56421BD783A00620B33 /* JSModule.swift */,
+				36D01A7221FE294F0091F054 /* Utilities */,
 				36D31C6B21C56D6A0003F361 /* Controllers */,
 				36D31C6821C569E80003F361 /* Views */,
 			);
@@ -166,6 +177,7 @@
 				3648A54B21BD726900620B33 /* AppDelegate.swift */,
 				36D01A7121FE23AD0091F054 /* Controllers */,
 				3648A56621BD789A00620B33 /* MyModule.swift */,
+				36D01A6E21FE1EB70091F054 /* UnboxJSValue.swift */,
 			);
 			path = UIKit.jsExamples;
 			sourceTree = "<group>";
@@ -271,6 +283,7 @@
 				3648A54621BD726900620B33 /* Frameworks */,
 				3648A54721BD726900620B33 /* Resources */,
 				3648A56121BD72BB00620B33 /* Embed Frameworks */,
+				36D01A7021FE21900091F054 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -330,6 +343,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				367A6B4121F79540006542FD /* LICENSE in Resources */,
+				36D01A6921FE1C800091F054 /* Cartfile.private in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -353,6 +367,28 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		36D01A7021FE21900091F054 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/Unbox.framework",
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Unbox.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		3648A52721BD722900620B33 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -365,6 +401,7 @@
 				3648A56321BD738500620B33 /* JSBridge.swift in Sources */,
 				367A6B2F21F6E192006542FD /* JSOperation.swift in Sources */,
 				367A6B2B21F675FC006542FD /* UIViewController.swift in Sources */,
+				36D01A7421FE29600091F054 /* BasicFetch.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
